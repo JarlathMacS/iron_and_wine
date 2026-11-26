@@ -61,8 +61,17 @@
     </div>
     {% endif %}
     
+    {% block page-header %}
+    {% endblock page-header %}
+    
     {% block content %}
     {% endblock content %}
+    
+    {% block postload-js %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock postload-js %}
 </body>
 
 </html>
